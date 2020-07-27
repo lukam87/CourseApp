@@ -1,0 +1,205 @@
+{
+  "courses": [
+    {
+      "name": "Test course",
+      "description": "Test description",
+      "city": "Mostar",
+      "startDate": {
+        "year": 2020,
+        "month": 6,
+        "day": 11
+      },
+      "endDate": {
+        "year": 2020,
+        "month": 6,
+        "day": 20
+      },
+      "students": [
+        {
+          "id": 5,
+          "name": "Bordie Bellringer"
+        }
+      ],
+      "teacher": {
+        "id": 2,
+        "name": "Haley Keems"
+      },
+      "id": 1
+    }
+  ],
+  "teachers": [
+    {
+      "firstName": "Cleo",
+      "lastName": "Vany",
+      "subject": "Angular",
+      "email": "cvany0@bing.com",
+      "gender": "Female",
+      "company": "Tagcat",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "firstName": "Haley",
+      "lastName": "Keems",
+      "subject": "React",
+      "email": "hkeems1@ed.gov",
+      "gender": "Female",
+      "company": "Dabvine"
+    },
+    {
+      "id": 3,
+      "firstName": "Rolph",
+      "lastName": "Esplin",
+      "subject": "VueJS",
+      "email": "resplin2@oakley.com",
+      "gender": "Male",
+      "company": "Devbug"
+    },
+    {
+      "id": 4,
+      "firstName": "Prissie",
+      "lastName": "M'Quhan",
+      "subject": "JavaScript",
+      "email": "pmquhan3@pagesperso-orange.fr",
+      "gender": "Female",
+      "company": "DabZ"
+    },
+    {
+      "id": 5,
+      "firstName": "Waverley",
+      "lastName": "Kapelhof",
+      "subject": "Java",
+      "email": "wkapelhof4@salon.com",
+      "gender": "Male",
+      "company": "Kwilith"
+    },
+    {
+      "id": 6,
+      "firstName": "Anastassia",
+      "lastName": "Laird-Craig",
+      "subject": "Angular",
+      "email": "alairdcraig5@state.gov",
+      "gender": "Female",
+      "company": "Jetwire"
+    },
+    {
+      "id": 7,
+      "firstName": "Meara",
+      "lastName": "Lorente",
+      "subject": "Ruby",
+      "email": "mlorente6@smugmug.com",
+      "gender": "Female",
+      "company": "Cogilith"
+    },
+    {
+      "id": 8,
+      "firstName": "Clifford",
+      "lastName": "Masding",
+      "subject": "React",
+      "email": "cmasding7@miitbeian.gov.cn",
+      "gender": "Male",
+      "company": "Yabox"
+    },
+    {
+      "id": 9,
+      "firstName": "Bondy",
+      "lastName": "Winridge",
+      "subject": "Angular",
+      "email": "bwinridge8@51.la",
+      "gender": "Male",
+      "company": "Flashpoint"
+    },
+    {
+      "firstName": "Nemanja",
+      "lastName": "Marinkovic",
+      "subject": "Angular",
+      "email": "nena@gmail.com",
+      "gender": "male",
+      "company": "Simphony",
+      "id": 10
+    }
+  ],
+  "students": [
+    {
+      "id": 2,
+      "firstName": "Alec",
+      "lastName": "Greswell",
+      "interstedFor": "Angular",
+      "email": "agreswell1@livejournal.com",
+      "gender": "Male",
+      "phoneNumber": "386-795-7861"
+    },
+    {
+      "id": 3,
+      "firstName": "Klarika",
+      "lastName": "Jobke",
+      "interstedFor": "React",
+      "email": "kjobke2@fda.gov",
+      "gender": "Female",
+      "phoneNumber": "370-126-1669"
+    },
+    {
+      "id": 4,
+      "firstName": "Sheeree",
+      "lastName": "Proudlock",
+      "interstedFor": "JavaScript",
+      "email": "sproudlock3@psu.edu",
+      "gender": "Female",
+      "phoneNumber": "800-877-8769"
+    },
+    {
+      "id": 5,
+      "firstName": "Bordie",
+      "lastName": "Bellringer",
+      "interstedFor": "Angular",
+      "email": "bbellringer4@123-reg.co.uk",
+      "gender": "Male",
+      "phoneNumber": "110-172-2161"
+    },
+    {
+      "id": 6,
+      "firstName": "Barby",
+      "lastName": "Oxton",
+      "interstedFor": "Ryby",
+      "email": "boxton5@godaddy.com",
+      "gender": "Female",
+      "phoneNumber": "842-864-2284"
+    },
+    {
+      "id": 7,
+      "firstName": "Joyan",
+      "lastName": "Giddens",
+      "interstedFor": "Java",
+      "email": "jgiddens6@elegantthemes.com",
+      "gender": "Female",
+      "phoneNumber": "202-753-7352"
+    },
+    {
+      "id": 8,
+      "firstName": "Noe",
+      "lastName": "Kelston",
+      "interstedFor": "VueJS",
+      "email": "nkelston7@usgs.gov",
+      "gender": "Male",
+      "phoneNumber": "477-417-3433"
+    },
+    {
+      "id": 9,
+      "firstName": "Antoni",
+      "lastName": "Vitler",
+      "interstedFor": "Java",
+      "email": "avitler8@ask.com",
+      "gender": "Male",
+      "phoneNumber": "693-134-9141"
+    },
+    {
+      "id": 10,
+      "firstName": "Jed",
+      "lastName": "Vincent",
+      "interstedFor": "JavaScript",
+      "email": "jvincent9@usgs.gov",
+      "gender": "Male",
+      "phoneNumber": "856-821-7697"
+    }
+  ]
+}

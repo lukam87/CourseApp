@@ -1,0 +1,12 @@
+<div
+  class="nav flex-column nav-pills"
+  role="tablist"
+  aria-orientation="vertical"
+>
+  <app-menu-item
+    *ngFor="let item of menu"
+    [name]="item.name"
+    [path]="item.path"
+  >
+  </app-menu-item>
+</div>

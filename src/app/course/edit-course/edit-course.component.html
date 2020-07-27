@@ -1,0 +1,107 @@
+<div class="card">
+  <div class="card-header">
+    <h3>Edit Course</h3>
+  </div>
+
+  <div class="card-body">
+    <form [formGroup]="courseForm">
+      <div class="form-group">
+        <label>Name: </label>
+        <input class="form-control" type="text" formControlName="name" />
+      </div>
+
+      <div class="form-group">
+        <label>Description: </label>
+        <textarea
+          type="text"
+          class="form-control"
+          formControlName="description"
+        ></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="teacher">Teacher: </label>
+        <ng-select
+          *ngIf="teacher?.length"
+          [items]="teacher"
+          labelForId="teacher"
+          bindLabel="name"
+          clearAllText="Clear"
+          formControlName="teacher"
+        >
+        </ng-select>
+      </div>
+
+      <div class="form-group">
+        <label for="students">Students: </label>
+        <ng-select
+          *ngIf="student"
+          [items]="student"
+          bindLabel="name"
+          labelForId="students"
+          clearAllText="Clear"
+          [multiple]="true"
+          formControlName="students"
+        >
+        </ng-select>
+      </div>
+
+      <div class="form-group">
+        <label>City: </label>
+        <select formControlName="city" class="form-control form-control-lg">
+          <option value="Sarajevo">Sarajevo</option>
+          <option value="Banja Luka">Banja Luka</option>
+          <option value="Mostar">Mostar</option>
+          <option value="Trebinje">Trebinje</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label>Start date: </label>
+            <div class="input-group">
+              <input
+                [minDate]="startDate"
+                class="form-control"
+                placeholder="yyyy-mm-dd"
+                name="dp"
+                formControlName="startDate"
+                ngbDatepicker
+                #startDatePicker="ngbDatepicker"
+                (click)="startDatePicker.toggle()"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label>End date: </label>
+            <div class="input-group">
+              <input
+                [minDate]="startDate"
+                class="form-control"
+                placeholder="yyyy-mm-dd"
+                name="dp"
+                formControlName="endDate"
+                ngbDatepicker
+                #endDatePicker="ngbDatepicker"
+                (click)="endDatePicker.toggle()"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="card-footer">
+    <button
+      class="btn btn-secondary"
+      type="submit"
+      (click)="save(courseForm.value)"
+    >
+      Save
+    </button>
+    <button class="btn btn-outline-secondary" (click)="goBack()">Back</button>
+  </div>
+</div>

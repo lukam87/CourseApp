@@ -1,0 +1,65 @@
+<div class="col-md-6">
+  <div class="card-header">
+    <h4>Course Detail</h4>
+  </div>
+  <div class="card-body" *ngIf="courseDetail">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-3">Name:</div>
+          <div class="col-md-6">{{ courseDetail.name }}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">Description:</div>
+          <div class="col-md-6">{{ courseDetail.description }}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">City:</div>
+          <div class="col-md-6">{{ courseDetail.city }}</div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3">Teacher:</div>
+          <ng-container *ngIf="courseDetail?.teacher; else noTeacher">
+            <div class="col-md-6">
+              {{ courseDetail.teacher.name }}
+            </div>
+          </ng-container>
+          <ng-template #noTeacher>
+            <div class="col-md-6">No Teacher yet</div>
+          </ng-template>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3">Students:</div>
+          <ng-container *ngIf="courseDetail?.students">
+            <div class="col-md-6" *ngFor="let student of courseDetail.students">
+              {{ student.name }}
+            </div>
+          </ng-container>
+          <ng-template #noStudents>
+            <div class="col-md-6">No Students yet</div>
+          </ng-template>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3">Start Date:</div>
+          <div class="col-md-6">{{ startDateFormated }}</div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">End Date:</div>
+          <div class="col-md-6">{{ endDateFormated }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <button class="btn btn-secondary" [routerLink]="['/home']">
+          Back
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

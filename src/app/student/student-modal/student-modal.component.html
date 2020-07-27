@@ -1,0 +1,118 @@
+<div class="modal-header">
+  <h4 class="modal-title">{{ title }}</h4>
+  <button
+    type="button"
+    class="close"
+    aria-label="Close"
+    (click)="activeModal.dismiss('Cross click')"
+  >
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <form [formGroup]="studentForm">
+    <div class="form-group">
+      <label>First Name</label>
+      <input class="form-control" type="text" formControlName="firstName" />
+      <em
+        class="text-danger"
+        *ngIf="firstNameField.touched && firstNameField.errors?.required"
+      >
+        Field is required
+      </em>
+      <em
+        class="text-danger"
+        *ngIf="firstNameField.touched && firstNameField.errors?.minlength"
+      >
+        Minimum 2 characters is required
+      </em>
+    </div>
+    <div class="form-group">
+      <label>Last Name</label>
+      <input class="form-control" type="text" formControlName="lastName" />
+      <em
+        class="text-danger"
+        *ngIf="lastNameField.touched && lastNameField.errors?.required"
+      >
+        Field is required
+      </em>
+      <em
+        class="text-danger"
+        *ngIf="lastNameField.touched && lastNameField.errors?.minlength"
+      >
+        Minimum 2 characters is required
+      </em>
+    </div>
+    <div class="form-group">
+      <label>Email</label>
+      <input class="form-control" type="email" formControlName="email" />
+      <em
+        class="text-danger"
+        *ngIf="emailField.touched && emailField.errors?.required"
+      >
+        Field is required
+      </em>
+      <em
+        class="text-danger"
+        *ngIf="emailField.touched && emailField.errors?.email"
+      >
+        Email is not valid
+      </em>
+    </div>
+    <div class="form-group">
+      <label>Intersted For</label>
+      <input class="form-control" type="text" formControlName="interstedFor" />
+    </div>
+
+    <div class="form-group">
+      <label>Phone</label>
+      <input class="form-control" type="phone" formControlName="phone" />
+      <em
+        class="text-danger"
+        *ngIf="phoneField.touched && phoneField.errors?.required"
+      >
+        Field is required
+      </em>
+    </div>
+
+    <div class="form-check form-check-inline">
+      <input
+        class="form-check-input"
+        formControlName="gender"
+        type="radio"
+        name="gender"
+        id="male"
+        value="Male"
+      />
+      <label class="form-check-label" for="male">Male</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input
+        class="form-check-input"
+        formControlName="gender"
+        type="radio"
+        name="gender"
+        id="female"
+        value="Female"
+      />
+      <label class="form-check-label" for="female">Female</label>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button
+    type="submit"
+    class="btn btn-outline-primary"
+    [disabled]="studentForm.invalid"
+    (click)="addStudent()"
+  >
+    {{ btnLabel }}
+  </button>
+  <button
+    type="button"
+    class="btn btn-outline-dark"
+    (click)="activeModal.close('Close click')"
+  >
+    Close
+  </button>
+</div>

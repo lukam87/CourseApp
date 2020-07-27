@@ -1,0 +1,49 @@
+<app-common-header (openModal)="openCourse()"></app-common-header>
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Descripion</th>
+      <th scope="col">City</th>
+      <th scope="col">Start Date</th>
+      <th scope="col">End Date</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let course of courses; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ course.name }}</td>
+      <td>{{ course.description }}</td>
+      <td>{{ course.city }}</td>
+      <td>
+        {{ course.startDate.day }}/{{ course.startDate.month }}/{{
+          course.startDate.year
+        }}
+      </td>
+      <td>
+        {{ course.endDate.day }}/{{ course.endDate.month }}/{{
+          course.endDate.year
+        }}
+      </td>
+      <td>
+        <button
+          class="btn btn-info btn-sm mr-1"
+          type="button"
+          (click)="editCourse(course)"
+        >
+          Edit
+        </button>
+
+        <button
+          class="btn btn-danger btn-sm"
+          type="button"
+          (click)="deleteCourse(course)"
+        >
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

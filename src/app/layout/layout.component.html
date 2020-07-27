@@ -1,0 +1,15 @@
+<header class="header">
+  <nav class="nav cm-navbar">
+    <h1 class="title">
+      <a class="nav-link active">Course Management System</a>
+    </h1>
+  </nav>
+  <button class="btn btn-outline-primary" (click)="logOut()">Logout</button>
+</header>
+
+<div class="sidebar">
+  <app-menu></app-menu>
+</div>
+<div class="main-content">
+  <router-outlet></router-outlet>
+</div>

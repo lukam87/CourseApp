@@ -1,0 +1,43 @@
+<app-common-header (openModal)="openTeacherModal()"></app-common-header>
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Subject</th>
+      <th scope="col">Email</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Company</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let teacher of teachers; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ teacher.firstName }}</td>
+      <td>{{ teacher.lastName }}</td>
+      <td>{{ teacher.subject }}</td>
+      <td>{{ teacher.email }}</td>
+      <td>{{ teacher.gender }}</td>
+      <td>{{ teacher.company }}</td>
+      <td>
+        <button
+          class="btn btn-info btn-sm mr-1"
+          type="button"
+          (click)="editTeacher(teacher)"
+        >
+          Edit
+        </button>
+
+        <button
+          class="btn btn-danger btn-sm"
+          type="button"
+          (click)="deleteTeacher(teacher)"
+        >
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

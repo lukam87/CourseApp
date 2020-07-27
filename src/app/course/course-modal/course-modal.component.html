@@ -1,0 +1,91 @@
+<div class="modal-header">
+  <h4 class="modal-title">{{ title }}</h4>
+  <button
+    type="button"
+    class="close"
+    aria-label="Close"
+    (click)="activeModal.close()"
+  >
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <form [formGroup]="courseForm">
+    <div class="form-group">
+      <label>Name: </label>
+      <input type="text" class="form-control" formControlName="name" />
+    </div>
+
+    <div class="form-group">
+      <label>Description: </label>
+      <textarea
+        type="text"
+        class="form-control"
+        formControlName="description"
+      ></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>City: </label>
+      <select formControlName="city" class="form-control form-control-lg">
+        <option value="Sarajevo">Sarajevo</option>
+        <option value="Banja Luka">Banja Luka</option>
+        <option value="Mostar">Mostar</option>
+        <option value="Trebinje">Trebinje</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label>Start date: </label>
+          <div class="input-group">
+            <input
+              [minDate]=""
+              class="form-control"
+              placeholder="yyyy-mm-dd"
+              name="dp"
+              formControlName="startDate"
+              ngbDatepicker
+              #startDatePicker="ngbDatepicker"
+              (click)="startDatePicker.toggle()"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label>End date: </label>
+          <div class="input-group">
+            <input
+              class="form-control"
+              placeholder="yyyy-mm-dd"
+              name="dp"
+              formControlName="endDate"
+              ngbDatepicker
+              #endDatePicker="ngbDatepicker"
+              (click)="endDatePicker.toggle()"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button
+    type="submit"
+    class="btn btn-outline-primary"
+    [disabled]="courseForm.invalid"
+    (click)="addCourse()"
+  >
+    Add Course
+  </button>
+  <button
+    type="button"
+    class="btn btn-outline-dark"
+    (click)="activeModal.close()"
+  >
+    Close
+  </button>
+</div>
